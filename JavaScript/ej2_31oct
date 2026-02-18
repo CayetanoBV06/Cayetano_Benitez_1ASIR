@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Par o Impar</title>
+</head>
+<body>
+  <h2>Verificar si los números son pares o impares</h2>
+
+  <script>
+    //declarar los valores de un array, visualizar por cada valor si es par o impar
+
+    let numeros = [3, 10, 7, 22, 15, 8];
+
+    for (let i = 0; i < numeros.length; i++) {
+      if (numeros[i] % 2 === 0) {
+        document.write(numeros[i] + " es par<br>");
+      } else {
+        document.write(numeros[i] + " es impar<br>");
+      }
+    }
+  </script>
+</body>
+</html>
+

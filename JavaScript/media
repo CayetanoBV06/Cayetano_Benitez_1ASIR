@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suma de números inferiores</title>
+</head>
+<body>
+  <script>
+//dada las 3 notas de un alumno, visualizar si su media esta aprobada o suspensa
+let a = parseInt(prompt('Ingrese el primer numero: '));
+    let b = parseInt(prompt('Ingrese el segundo numero: '));
+    let c = parseInt(prompt('Ingrese el tercer numero: '));
+
+    function Media(x, y, z) {
+      return (x + y + z) / 3;
+    }
+
+    function Visualizar(valor) {
+        document.write("La media es " + valor);
+        if(valor>=5){
+      document.write("La media es: aprobado");
+        }
+        else{
+            document.write(" La media es: suspenso");
+        }
+    }
+
+    let resultado = Media(a, b, c);
+    Visualizar(resultado);
+
+  </script>
+</body>
+</html>

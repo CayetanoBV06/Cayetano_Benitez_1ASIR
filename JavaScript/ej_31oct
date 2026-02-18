@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suma de números inferiores</title>
+</head>
+<body>
+  <script>
+//dados tres numeros obtener la media
+let a = 5;
+    let b = 3;
+    let c = 4;
+
+    function Media(x, y, z) {
+      return (x + y + z) / 3;
+    }
+
+    function Visualizar(valor) {
+      document.write("La media es: " + valor);
+    }
+
+    let resultado = Media(a, b, c);
+    Visualizar(resultado);
+
+  </script>
+</body>
+</html>

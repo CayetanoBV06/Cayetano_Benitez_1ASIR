@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Posición del número mayor</title>
+</head>
+<body>
+  <h2>Encontrar la posición del número mayor</h2>
+
+  <script>
+    //declarar un array con valores numericos y visualizar la posicion donde este el mayor
+
+    let numeros = [5, 12, 3, 27, 18, 27, 9];
+
+    let mayor = numeros[0];
+    let posicion = 0;
+
+    for (let i = 1; i < numeros.length; i++) {
+      if (numeros[i] > mayor) {
+        mayor = numeros[i];
+        posicion = i; // Guardar la posición
+      }
+    }
+
+    document.write("Los valores del array son: " + numeros.join(", ") + "<br>");
+    document.write("El número mayor es: " + mayor + "<br>");
+    document.write("Está en la posición: " + posicion);
+  </script>
+</body>
+</html>

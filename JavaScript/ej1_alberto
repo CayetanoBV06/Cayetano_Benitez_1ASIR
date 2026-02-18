@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suma de números inferiores</title>
+</head>
+<body>
+  <script>
+    //1º dado un numero obtener la suma de los inferiores a el hasta el 1
+
+    //---programa principal
+ let numero = 20;
+ re = Proceso(numero);
+ Visualizar(re)
+
+    //-----funciones
+function Proceso(n){
+    let suma = 0;
+    for (i = n-1; i>=1; i--){
+        suma = suma + i
+    }
+    return suma;
+}
+
+function Visualizar(dato){
+    document.write(dato);
+}
+  </script>
+</body>
+</html>

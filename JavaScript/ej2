@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suma de números inferiores en array</title>
+</head>
+<body>
+  <script>
+    //2º declarar un array con valores enteros, aplicar el ejercicio anterior a cada uno de los valores del array
+
+    //---programa principal
+ let tab =[5,7,10,19];
+ Visualizar(tab);
+
+    //-----funciones
+function Proceso(n){
+    let suma = 0;
+    for (i = n-1; i>=1; i--){
+        suma = suma + i
+    }
+    return suma;
+}
+
+function Visualizar(tab){
+    for (k = 0; k<tab.length; k++){
+        document.write(Proceso(tab[k]) + " ");
+    }    
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suma de números inferiores</title>
+</head>
+<body>
+<script>
+    //dada diferentes notas de varios alumnos, visualizar por cada alumno su nombre y si esta aprobado o suspenso
+  // Matriz de notas corregida con sus comas
+  let mat_notas = [
+    ["Manuel", 5, 6, 7],
+    ["Ana", 5, 8, 7],
+    ["Luis", 5, 2, 7],
+    ["Rocio", 0, 6, 7]
+  ];
+
+  function Visualizar1(mat) {
+    for (let i = 0; i < mat.length; i++) {
+      let media = Media(mat[i]);
+      Visualizar2(mat[i][0], media);
+    }
+  }
+
+  function Media(tab) {
+    let acumulador = 0;
+    for (let i = 1; i < tab.length; i++) {
+      acumulador += tab[i];
+    }
+    let media = acumulador / (tab.length - 1);
+    return media;
+  }
+
+  function Visualizar2(valor, media) {
+    document.write(valor + ":");
+    if (media >= 5) {
+      document.write(" aprobado " + media + "<br>");
+    } else {
+      document.write(" suspenso " + media + "<br>");
+    }
+  }
+
+  // Llamada a la función principal
+  Visualizar1(mat_notas);
+</script>
+</body>
+</html>
