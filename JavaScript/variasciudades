@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Semana de lluvia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h2>Semana de lluvia</h2>
+
+  <script>
+    // Versión similar a la tuya: funciones con las mismas firmas y salida con document.write
+    // Array: nombre de varias ciudad + 7 valores (litros por día)
+    let lluvias = [
+      ["Chiclana", 10, 7, 22, 15, 8, 3, 11],
+      ["Cádiz", 5, 12, 18, 20, 25, 30, 35],
+      ["Sevilla", 0, 0, 0, 0, 0, 0, 0]
+    ];
+
+    function Media(lluvia) {
+      let acumulador = 0;
+      for (let i = 1; i < lluvia.length; i++) {
+        acumulador += lluvia[i];
+      }
+      let media = acumulador / (lluvia.length - 1);
+      return media;
+    }
+
+    function DiaMax(lluvia) {
+      let dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+      let max = lluvia[1];
+      let indice = 1;
+      for (let i = 2; i < lluvia.length; i++) {
+        if (lluvia[i] > max) {
+          max = lluvia[i];
+          indice = i;
+        }
+      }
+      return { dia: dias[indice - 1], litros: max };
+    }
+
+    function Visualizar(valor, media) {
+      // valor es el nombre de la ciudad (string). Buscamos el array de esa ciudad en 'lluvias'
+      let ciudadArray = null;
+      for (let i = 0; i < lluvias.length; i++) {
+        if (lluvias[i][0] === valor) {
+          ciudadArray = lluvias[i];
+          break;
+        }
+      }
+      document.write(valor + ": La media de los 7 dias es: " + media + " litros<br>");
+      if (ciudadArray) {
+        let diaMax = DiaMax(ciudadArray);
+        document.write("El dia que mas llovio fue: " + diaMax.dia + " con " + diaMax.litros + " litros");
+      } else {
+        document.write("(No se encontraron datos de lluvia para esta ciudad)");
+      }
+      document.write("<br><br>");
+    }
+
+    // Iterar por todas las ciudades y mostrar resultados con tu estilo
+    for (let i = 0; i < lluvias.length; i++) {
+      let ciudad = lluvias[i];
+      let resultado = Media(ciudad);
+      Visualizar(ciudad[0], resultado);
+    }
+  </script>
+</body>
+</html>
+
