@@ -1,0 +1,134 @@
+.titulo h3 {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto; 
+    margin-top:20px ;
+}
+.titulo h2 {
+    text-align: center;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.titulo img {
+    display: block;
+    margin-top: 0;
+    float: left;
+}
+
+header {
+    background-color: yellow;
+    height: 200px;
+}
+.botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-right: 20px;
+
+}
+footer{
+    text-align: center;
+    background-color: lightblue;
+    height: 80px
+}
+
+.bloque_1 {
+    background-color: lightgreen;
+    text-align: center;
+    width: 200px;
+    border: solid black 1px;
+}
+.bloque_2 {
+    background-color: lightgreen;
+    width: 200px;
+    border: solid black 1px;
+    margin-top: 5px;
+}
+.bloque_1 p{
+    margin-top: 1px;
+}
+.bloque_2 h3{
+    text-align: center;
+}
+.imagen{
+    display: block;
+    margin: 0 auto;
+}
+#Edad_media{
+    background-color: orange;
+    width:700px;
+    margin-top: 0;
+}
+.amarillo{
+    background-color: yellow;
+    width: 690px;
+    display: flex;
+    gap: 12px;
+    padding: 12px 6px 12px 12px;
+    box-sizing: border-box;
+    margin: 0 auto 8px auto;
+}
+#Edad_moderna{
+    background-color: orange;
+    width:700px;
+}
+.rojo{
+    background-color: red;
+    width: 320px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: black;
+    
+}
+.rojo h2{
+    display: inline-block;
+
+    padding: 6px 10px;
+    margin: 0;
+}
+.texto{
+    background-color: orange;
+    margin-top: 10px;
+    padding: 8px;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+    flex: 1;
+}
+
+main{
+    display: flex;
+    align-items: flex-start;
+    gap: 0px; 
+    padding: 10px 12px 30px 12px;
+}
+main section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 170px; 
+}
+
+.foto{
+    display: flex;
+    align-items: flex-start; 
+    width: 220px;
+    margin-left: 0;
+}
+.foto img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+article{
+    align-self: flex-start;
+}
+
