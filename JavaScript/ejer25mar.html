@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Se piden 3 notas de alumno, debes de obtener la media
+
+        let nota1 = parseFloat(prompt("Dime la primera nota"));
+        let nota2 = parseFloat(prompt("Dime la segunda nota"));
+        let nota3 = parseFloat(prompt("Dime la tercera nota"));
+
+        function Media(nota1, nota2, nota3){
+            let suma = nota1 + nota2 + nota3
+            let media = (suma) / 3
+            return media
+        }
+
+        function Visualizar(){
+            document.write("La media del alumno es: "+Media(nota1, nota2, nota3)+"<br>")
+            if(Media(nota1, nota2, nota3)>=5){
+                document.write("La media da aprobado")
+            }
+            else{
+                document.write("La nota da suspenso")
+            }
+        }
+
+        Visualizar()
+    </script>
+</body>
+</html>

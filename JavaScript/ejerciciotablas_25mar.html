@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //calcula media del array
+        let tabla_notas=[5,6,7,4];
+        function Media(tab_notas){
+            i=0;
+            suma = 0;
+            while(i<tab_notas.length){
+                suma = suma + tab_notas[i];
+                i++;
+            }
+            media = suma / tab_notas.length;
+            return media
+        }
+
+        function Visualizar(dato){
+            document.write("Media: "+dato)
+        }
+
+        Visualizar(Media(tabla_notas));
+    </script>
+</body>
+</html>
