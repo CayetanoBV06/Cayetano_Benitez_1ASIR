@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        dado dos numeros sumar los valores intermedios
+        */
+         let numero1 = parseInt(prompt("Ingrese el primer numero: "));
+        let numero2 = parseInt(prompt("Ingrese el segundo numero: "));
+
+        function Visualizar(n1,n2){
+            let i = 0
+            contador= 0
+            suma = 0
+            if(n1>n2){
+            document.write("ERROR!!!!")
+        }
+        else{
+        for(i=n1+1; i<n2; i++){
+                document.write(" ",i," ")
+                suma +=i
+                if (i<0){
+                    contador++;
+                    
+                }
+            }
+            document.write("<br>Hay ",contador," numeros negativos")
+            document.write("<br>La suma de los numeros intermedios son ", suma)
+    }
+}
+        Visualizar(numero1,numero2)
+    </script>
+</body>
+</html>

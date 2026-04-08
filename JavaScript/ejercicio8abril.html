@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            dados dos numeros enteros visualizar los comprendidos por ejemplo entre 1 y 5 serian los
+            2,3,4
+        */
+
+        let numero1 = parseInt(prompt("Ingrese el primer numero: "));
+        let numero2 = parseInt(prompt("Ingrese el segundo numero: "));
+
+        function Visualizar(n1,n2){
+            let i = 0
+            for(i=n1+1; i<n2; i++){
+                document.write(i)
+            }
+
+        }
+        Visualizar(numero1,numero2)
+    </script>
+</body>
+</html>

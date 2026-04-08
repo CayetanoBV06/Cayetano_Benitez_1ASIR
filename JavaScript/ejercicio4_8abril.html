@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Declarar un array con las distintas notas de un alumno, que nos diga cuantas notas aprobadas tiene
+            vamos a añadir un acumulador que me diga la media de las notas aprobadas
+        */
+
+        let notas = [3,6,6,1,4]
+
+        function Proceso(not){
+            contador = 0;
+            suma = 0;
+            media = 0;
+            for (i=0; i<not.length;i++){
+            if (not[i]>=5){
+                contador++
+                suma +=not[i]
+                
+            }
+        }
+        media= suma/contador
+            return {contador,media}
+             
+        }
+
+        function Visualizar(dato, media){
+            document.write("Tiene ",dato," notas aprobadas<br>")
+            document.write("La media de las notas aprobadas es: ",media)
+
+        }
+        resul = Proceso(notas)
+        Visualizar(resul.contador,resul.media)
+    </script>
+</body>
+</html>
