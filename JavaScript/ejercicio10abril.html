@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Declarar un array con una serie de valores, Visualizar si en ese array se encuentra el valor -99
+        */
+
+        let valores = [1,2,3,4,-99]
+
+        function Proceso(datos){
+            sw = false
+            for(i=0;i<datos.length;i++)
+                if(datos[i]==-99){
+                    sw=true
+                }
+            return sw
+        }
+
+
+        function Visualizar(dato){
+            if(dato==0){
+            document.write("No existe el valor -99")
+            }
+            else{
+                document.write("Si existe el -99")
+            }
+        }
+
+        resul = Proceso(valores)
+
+        Visualizar(resul)
+    </script>
+</body>
+</html>

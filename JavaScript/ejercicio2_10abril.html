@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Visualizar numeros del 10 en adelante hasta que se encuentre un valor multiplo de 1
+        */
+
+        function Visualizar(dato){
+            let sw = 0
+            let conta = 10
+            while(sw==0){
+                if(conta % 7 == 0){
+                    sw = 1;
+                }
+                else{
+                    alert(conta);
+                    conta+=1;
+                }
+            }
+        }
+
+        Visualizar()
+    </script>
+</body>
+</html>
