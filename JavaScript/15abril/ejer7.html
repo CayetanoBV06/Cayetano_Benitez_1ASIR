@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+       /*
+           pedir numeros repetidamente, siempre y cuando el numero tecleado sea mayor que el anteriormente tecleado,
+           Visualizar cuanto numeros han sido tecleados y cuales
+
+
+       */
+        function encontrar(){
+   let aux = -9999
+   let sw = 0
+   let ingr = []
+   while(sw === 0){
+       let num = parseInt(prompt("Introduce la nota"))
+       if(num < aux){
+           sw = 1
+       } else{
+         
+           aux=num
+           ingr.push(num)
+       }
+   }
+   return ingr
+        }
+
+
+function Visualizar(dato){
+   document.write("Los numeros introducidos son: ", dato, " has escrito: ", dato.length)
+}
+Visualizar(encontrar())
+   </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <p>Ingrese su nombre:<input type="text" id="nombre"></p>
+        <p>Ingrese su edad:<input type="text" id="edad"></p>
+        <input type="button" value="Confirmar" onClick="mostrar()">
+    </form>
+
+    <script>
+        //el document.getElementById coge del html lo que tenga el id 
+        //puesto
+        function mostrar() {
+            let nom = document.getElementById('nombre').value;
+            let ed = document.getElementById('edad').value;
+            alert('Ingresó el nombre:' + nom);
+            alert('Y la edad:' + ed);
+        }
+    </script>
+
+</body>
+
+</html>

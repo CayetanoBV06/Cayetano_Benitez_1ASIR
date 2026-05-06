@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+
+
+       /*
+           Visualizar numeros enteros hasta que el numero introducido sea superior de 100 y multiplo de 7
+           en ese momento que se encuentre el numero, que visualice cuantos numeros se han visualizado       
+       */
+      function encontrar(){
+   let sw = 0
+   let numero = 1
+   while(sw == 0){
+       if(numero > 100 && (numero%7==0)){
+           sw = 1
+       } else {
+           document.write(numero)
+           numero++
+       }
+   }
+}
+encontrar()
+
+
+   </script>
+</body>
+</html>

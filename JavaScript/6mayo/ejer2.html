@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*declarar un array bidimensiona con las notas de tres alumnos 
+        y hacer la media de cada uno*/
+        let alumnos = [["Cayetano",5,6,2,9],
+                        ["Luis",8,9,2],
+                        ["Ana",9,4,2,6]]
+
+        function Media(alum){
+            suma = 0
+            for(let i=1;i<alum.length;i++){
+                
+                    suma+=alum[i]
+            }
+            media = suma/(alum.length-1) 
+            return [alum[0],media] 
+            
+        }
+
+        function Visualizar(dato){
+            for(let i=0;i<dato.length;i++){
+                tab = Media(dato[i]);
+                document.write(tab[0]," tiene ",tab[1],"<br>")
+            }
+            
+        }
+
+        
+        Visualizar(alumnos)
+
+
+    </script>
+</body>
+</html>

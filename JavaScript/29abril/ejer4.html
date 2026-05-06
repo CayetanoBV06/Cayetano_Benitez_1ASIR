@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+       /*
+           por cada trabajador la media
+       */
+                    mat_sueldos = [
+               ["Pepe",800,2300,1900],
+               ["Ana",1500,4000],
+               ["Manuel",900,300,5200]
+       ];
+
+
+       function Proceso(sueldos) {
+   for (var i = 0; i < sueldos.length; i++) {
+       var suma = 0;
+       var media = 0
+       for (var k = 1; k < sueldos[i].length; k++) {
+           suma += sueldos[i][k];
+           media=suma/(sueldos[i].length-1);
+       }
+
+
+        document.write("El sueldo medio de "+sueldos[i][0]+" es: "  + media +"<br>")
+
+
+
+
+   }
+}
+
+
+
+
+
+
+       Proceso(mat_sueldos)
+   </script>
+</body>
+</html>

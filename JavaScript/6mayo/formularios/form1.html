@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <input type="button" onClick="incrementar()" value="incrementar">
+        <input type="button" onClick="decrementar()" value="decrementar">
+
+    </form>
+
+    <script>
+        let contador = 0;
+
+        function incrementar() {
+            contador++;
+            alert('El contador ahora vale :' + contador);
+        }
+
+        function decrementar(){
+            contador--;
+            alert('El contador ahora vale: '+contador)
+        }
+    </script>
+
+</body>
+
+</html>

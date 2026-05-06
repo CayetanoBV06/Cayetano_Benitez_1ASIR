@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <p>Ingrese numero:<input type="number" id="num1"></p>
+        <p>Ingrese numero:<input type="number" id="num2"></p>
+        <input type="button" value="+" onClick="suma()">
+        <input type="button" value="-" onClick="resta()">
+        <input type="button" value="*" onClick="multi()">
+        <input type="button" value="/" onClick="div()">
+        <p></p>Resultado:<p id = "resul"></p>
+
+    </form>
+
+    <script>
+        //el document.getElementById coge del html lo que tenga el id 
+        //puesto
+        function suma() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            resul=num1+num2
+            document.getElementById('resul').innerHTML = "La suma es "+ resul;
+        }
+        function resta() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            resul=num1-num2
+            document.getElementById('resul').innerHTML ="La resta es "+ resul;
+        }
+        function multi() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            resul=num1*num2
+            document.getElementById('resul').innerHTML = "La multiplicacion es "+resul;
+        }
+        function div() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            resul=num1/num2
+            document.getElementById('resul').innerHTML = "La division es "+resul;
+        }
+    </script>
+
+</body>
+
+</html>

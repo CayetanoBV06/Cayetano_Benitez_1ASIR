@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+       /*
+       Declarar un array con valores numericos enteros, obtener si el array esta ordenado ascendentemente si o no
+       */
+
+
+
+
+let numeros = [1, 2, 3, 4, 5, 6, 7];
+
+
+function asc(num) {
+   let sw = 0;
+   let i = 0; 
+
+
+   while (sw == 0 && i < num.length - 1) {
+       if (num[i] > num[i + 1]) {
+           sw = 1;
+       }
+       i++;
+   }
+
+
+   if (sw == 0) {
+       document.write("si es ascendente");
+   } else {
+       document.write("no es ascendente");
+   }
+}
+
+
+asc(numeros);
+   </script>
+</body>
+</html>m

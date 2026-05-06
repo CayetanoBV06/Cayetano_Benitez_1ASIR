@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+       /*
+           Por cada empleado cuanto dinero total tiene
+       */
+             mat_sueldos = [
+               ["Pepe",800,2300,1900],
+               ["Ana",1500,4000],
+               ["Manuel",900,300,5200]
+       ];
+
+
+       function Proceso(sueldos) {
+   for (var i = 0; i < sueldos.length; i++) {
+       var suma = 0;
+       var nombre = sueldos[i][0];
+
+
+       for (var k = 1; k < sueldos[i].length; k++) {
+           suma += sueldos[i][k];
+       }
+
+
+   
+       Visualizar(nombre, suma);
+   }
+}
+
+
+     function Visualizar(empleado, total) {
+   document.write("El sueldo total de " + empleado + " es: " + total + "<br>");
+}
+
+
+       Visualizar(Proceso(mat_sueldos))
+   </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+       /*
+
+
+       */
+      mat_sueldos = [
+               [1300,800,2300,1900],
+               [2000,1500,4000],
+               [1400,900,300,5200]
+       ];
+
+
+function Visualizar(mat_sueldos) {
+   for (i = 0; i < mat_sueldos.length; i++) {
+       for (k = 0; k < mat_sueldos[i].length; k++) {
+           document.write(mat_sueldos[i][k] + " ");
+       }
+       document.write("<br>");
+   }
+}
+Visualizar(mat_sueldos)
+   </script>
+</body>
+</html>

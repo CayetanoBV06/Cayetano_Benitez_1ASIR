@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let array1 = [1, 2, 3, 4, 5];
+let array2 = [1, 2, 3, 4, 5];
+
+function sonIguales(arr1, arr2) {
+    let resultado = 0;
+
+    if (arr1.length === arr2.length) {
+        let todoIgual = 1;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== arr2[i]) {
+                todoIgual = 0;
+            }
+        }
+        if (todoIgual === 1) {
+            resultado = 1;
+        }
+    }
+
+    switch (resultado) {
+        case 1:
+            document.write("Los arrays son exactamente iguales: SÍ");
+            break;
+        case 0:
+            document.write("Los arrays son exactamente iguales: NO");
+            break;
+    }
+}
+
+sonIguales(array1, array2);
+    </script>
+</body>
+</html>

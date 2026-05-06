@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let alumnos = [
+        ["Cayetano", 5, 6, 2, 9],
+        ["Luis", 8, 9, 2],
+        ["Ana", 9, 4, 2, 6]
+    ];
+
+    function Media(alum) {
+        let suma = 0;
+        for (let i = 1; i < alum.length; i++) {
+            suma += alum[i];
+        }
+        return suma / (alum.length - 1);
+    }
+
+    function obtenerMejorAlumno(lista) {
+        let mejorNombre = "";
+        let mejorMedia = -1;
+
+        for (let i = 0; i < lista.length; i++) {
+            let mediaActual = Media(lista[i]); 
+            
+            if (mediaActual > mejorMedia) {
+                mejorMedia = mediaActual;
+                mejorNombre = lista[i][0];
+            }
+        }
+        return [mejorNombre, mejorMedia];
+    }
+
+    function Visualizar(listaCompleta) {
+        let mejor = obtenerMejorAlumno(listaCompleta);
+        document.write("La mayor media es de " + mejor[0] + " con un " + mejor[1].toFixed(2) + "");
+    }
+
+    Visualizar(alumnos);
+</script>
+</body>
+</html>

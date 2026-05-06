@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+       /*
+           Visualizar el nombre del trabajador con la mayor media
+       */
+                           mat_sueldos = [
+               ["Pepe",800,2300,1900],
+               ["Ana",1500,4000],
+               ["Manuel",900,300,5200]
+       ];
+
+
+       function Proceso(sueldos) {
+           var maxmedia=0
+           var nombre=0
+   for (var i = 0; i < sueldos.length; i++) {
+       var suma = 0;
+       var media = 0
+       for (var k = 1; k < sueldos[i].length; k++) {
+           suma += sueldos[i][k];
+           media=suma/(sueldos[i].length-1);
+           if(media>maxmedia){
+               maxmedia=media;
+               nombre=sueldos[i][0]
+           }
+       }
+      
+
+
+   }
+   return nombre
+
+
+}
+
+
+function Visualizar(dato){
+            document.write("El sueldo medio mayor es "+dato)
+
+
+}
+
+
+   resul=Proceso(mat_sueldos)
+
+
+  Visualizar(resul)
+   </script>
+</body>
+</html>
