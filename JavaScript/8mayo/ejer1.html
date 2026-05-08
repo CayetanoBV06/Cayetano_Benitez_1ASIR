@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <h2>Creating an Object</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        //---------------------JAVASCIPT CON JSON-----------------
+        //EL JSON es un STRING. Fijate en las comillas que envuelven TODO el bloque.
+        const productoJSON='{"id":101,"nombre":Monitor 4k,"disponible":true,"precio":350.50}';
+
+        //Para poder usarlo como un objeto, necesitas transformarlo:
+        alert("CON JSON: "+productoConvertido.nombre); //Resultado:"Monitor 4k"
+
+
+        //-------------------JAVASCRIPT CON OBJETOS----------------
+        const cocheJS={
+            marca:'Toyota',
+            modelo:'Corolla',
+            año:2024,
+            encender:function(){//Puede contener funciones(métodos)
+                return "El motor está en marcha";    
+            },
+            propietario:undefined //Admite valores 'undefined'
+        };
+
+        alert("con objetos javascript: "+cocheJS.encender()); //Funciona porque es un objeto
+
+    </script>
+</body>
+</html>
