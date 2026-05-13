@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            1.-) Dado un array tab1, pasar a otro array tab2 todos los valores de tab1 pero en
+            orden inverso, es decir:
+            $tab1=array (2,44,5,6,7,8,9) —> $tab2 queda con: 9,8,7,6,5,44,2
+            Visualizar tab2.
+        */
+
+        let tab1 = [2,44,5,6,7,8,9]
+        
+        function inver(tab){
+            let tab2 = []
+            tab2 = tab.reverse()
+            return tab2
+        }
+
+        function Visualizar(dato){
+            document.write(dato)
+        }
+
+        resul=inver(tab1)
+        Visualizar(resul)
+    </script>
+</body>
+</html>

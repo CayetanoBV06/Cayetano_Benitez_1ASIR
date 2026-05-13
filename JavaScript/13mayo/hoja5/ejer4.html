@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            4.-) Se declara un objeto con los contagios que ha habido en distintas localidades:
+            “Chiclana” : 130, “Conil” : 220, “San Fernando” : 300
+            Visualizar los valores de contagios.
+        */
+
+        const ciudades={
+            'Chiclana':130,
+            'Conil':220,
+            'San Fernando':300
+        }
+
+        function Visualizar(obj){
+            document.write(obj["Chiclana"]+"<br>")
+            document.write(obj["Conil"]+"<br>")
+            document.write(obj["San Fernando"]+"<br>")
+        }
+        Visualizar(ciudades)
+    </script>
+</body>
+</html>

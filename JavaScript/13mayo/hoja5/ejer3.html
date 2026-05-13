@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            3.-) Dados tres arrays o listas, lista1, lista2 y lista3 con valores numéricos:
+            guardar en el primer elemento de un array o lista BIDIMENSIONAL mat el
+            primer array o lista.
+            guardar en el segundo elemento de un array o lista BIDIMENSIONAL mat el
+            segundo array o lista.
+            guardar en el tercer elemento de un array o lista BIDIMENSIONAL mat el
+            tercer array o lista
+            visualizar el array o lista BIDIMENSIONAL
+        */
+
+        let lista1 = [1,2,3,4,5]
+        let lista2 = [6,7,8,9,10]
+        let lista3 = [11,12,13,14,15]
+
+        function Proceso(list1,list2,list3){
+            let mat = []
+            mat[0] = list1
+            mat[1] = list2
+            mat[2] = list3
+            return mat
+        }
+
+        function Visualizar(dato){
+            for(let i = 0;i<dato.length;i++){
+                for(let k=0;k<dato[i].length;k++){
+                    document.write(dato[i][k]+" ")
+                }
+                document.write("<br>")
+            }
+        }
+        resul = Proceso(lista1,lista2,lista3)
+        Visualizar(resul)
+        
+    </script>
+</body>
+</html>

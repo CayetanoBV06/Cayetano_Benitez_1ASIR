@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        6.-) Declarar un array o lista unidimensional como: tab_numeros =array(3, 6, 4, 8, 2,
+        1, 9). Visualizar si o no son todos positivos (utilizar switch o flag).
+        */
+
+        tab_numeros=[3,4,5,8,-7,6,8]
+
+        function Proceso(tab){
+            sw=0
+            for(let i=0;i<tab.length;i++){
+                if(tab[i]<0){
+                    sw=1
+                }
+            }
+            return sw
+        }
+
+        function Visualizar(dato){
+            if(dato==1){
+                document.write("Hay algun dato negativo")
+            }
+            else{
+                document.write("Todos los datos son positivos")
+            }
+        }
+        resul=Proceso(tab_numeros)
+        Visualizar(resul)
+    </script>
+</body>
+</html>

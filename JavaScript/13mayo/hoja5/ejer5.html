@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            5.-) Declarar un objeto con los siguientes datos de un alumno: nombre, nota 1eval,
+            nota 2eval y nota 3eval.
+            Visualizar la media de sus tres notas.
+        */
+
+        const alumno={
+            "Nombre":"Caye",
+            "nota1":5,
+            "nota2":6,
+            "nota3":2
+        }
+        function Media(obj){
+            let suma = obj["nota1"]+obj["nota2"]+obj["nota3"]
+            let media=suma/3
+            return media
+        }
+
+        function Visualizar(obj, dato){
+            document.write("La media de ",obj.Nombre," : ",dato)
+        }
+
+        resul = Media(alumno)
+        Visualizar(alumno,resul)
+    </script>
+</body>
+</html>
