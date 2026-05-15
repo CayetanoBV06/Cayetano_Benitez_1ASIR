@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Declarar un array de varios elementos que sean subarrays y que contengan valores numericos
+        Por cada subarray visualizar el primero y el ultimo
+        */
+
+        arr=[
+            [1,2,3,4],
+            [33,6,22,65],
+            [1,2,7,3,88]
+    ]
+
+    function valores(num){
+        for(let i=0;i<num.length;i++){
+            let subarray=num[i]
+            let primero=subarray[0]
+            let ultimo=subarray[subarray.length-1]
+            
+            document.write("array completo: ",subarray, " primero: ",primero," ultimo: ",ultimo,"<br>")
+            
+        }
+    }
+
+
+    valores(arr)
+    </script>
+</body>
+</html>

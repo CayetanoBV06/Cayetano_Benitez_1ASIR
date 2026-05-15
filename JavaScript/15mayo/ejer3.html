@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>Nombre:<input type="text" id="nombre"></p>
+        <p>Ingrese Nota:<input type="number" id="nota"></p>
+
+
+        <button type="button" value="+" onClick="suma()">
+                <p></p>Estado:<p id = "estado"></p>
+    <script>
+        /*dado un nombre de alumno y nota y decir si esta aprobado o
+        suspenso*/
+        let alumnos=[]
+        function evaluarAlumno(){
+            let alumno={
+                nombre:document.getElementById("nombre").value,
+                nota:parseFloat(getElementById("nota").value)
+            };
+            let estado;
+            if(alumno.nota>=5){
+                estado="Aprobado"
+            }else{
+                estado="Suspenso"
+            }
+            document.getElementById("estado").innerHTML=
+            "Alumno"
+        }
+    </script>
+</body>
+</html>
