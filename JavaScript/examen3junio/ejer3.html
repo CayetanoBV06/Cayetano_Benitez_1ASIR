@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ingrese numero:<input type="number" id="num1"></p>
+        <p>Ingrese numero:<input type="number" id="num2"></p>
+        <button type="button" value="guardar" onClick="guardar()">
+            <p></p>Guardar<p id = "guardar"></p>
+            <button type="button" value="visualizar" onClick="Mostrar()">
+            <p></p>Visualizar<p id = "visualizar"></p>
+    <script>
+        let guardados=[]
+
+        function guardar(){
+            let input = document.getElementById("num1");
+            let numero = parseInt(input.value);
+            let display = document.getElementById("guardar");
+
+            display.innerHTML = numero ;
+            guardados.push(numero);
+            input.value=""
+        }
+        function Mostrar(){
+            let input = document.getElementById("num2");
+            let num=parseInt(input.value)
+            let conta=0
+            for(let i=0;i<guardados.length;i++){
+                if(num==i){
+                    conta++
+                }
+            }
+            document.getElementById("visualizar").innerHTML=guardados
+            document.getElementById("visulizar").innerHTML=conta
+        }
+    </script>
+</body>
+</html>

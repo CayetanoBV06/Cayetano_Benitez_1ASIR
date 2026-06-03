@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        1.-) Dado un array de objetos que representan productos, cada uno con su precio y cantidad, calcula el costo total
+        de la compra multiplicando ambos valores y sumándolos.
+        const carrito = [ { producto: "Camisa", precio: 20, cantidad: 2 }, { producto: "Zapatos", precio: 50, cantidad: 1 },
+        { producto: "Calcetines", precio: 5, cantidad: 3 } ];
+        */
+
+        const carrito = [ { producto: "Camisa", precio: 20, cantidad: 2 },
+         { producto: "Zapatos", precio: 50, cantidad: 1 },
+         { producto: "Calcetines", precio: 5, cantidad: 3 } ];
+
+         function costo(obj){
+            coste=0
+            for (let i=0;i<obj.length;i++){
+                coste+=obj[i].precio*obj[i].cantidad
+            }
+            return coste
+         }
+         function Visualizar(dato){
+            document.write("El costo total es: ",dato)
+         }
+
+         resul=costo(carrito)
+         Visualizar(resul)
+    </script>
+</body>
+</html>

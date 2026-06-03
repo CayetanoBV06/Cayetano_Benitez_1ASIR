@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mat1=[
+            [4,7,9,45],
+            [7,5,4,3],
+            [66,33,21,3],
+            [5,70,150,477],
+            [5,4,3,2]
+        ]
+
+        
+        function buscar(arr){
+            let mayor=0
+            let list=[]
+            for (let i=0;i<arr.length;i++){
+                for (let k=0;k<arr.length;i++){
+                    if(arr[i][k]>mayor){
+                        mayor=arr[i]
+                        
+                }
+                list.push(mayor)
+                }
+            }
+            return list
+        }
+
+        function Visualizar(dato){
+            document.write("Los que son ascendente son: ",dato)
+        }
+
+        function ot_mat(list){
+            let mat2=[]
+            for (let i=0;i<list.length;i++){
+                for(let k=0;k<list[i].length;i++){
+                    if(list[i][k]%2==1){
+                        mat2.push("1")
+                    }else{
+                        mat2.push("0")
+                    }
+                }
+                
+            }
+            return mat2
+        }
+        //=================================
+        resul=buscar(mat1)
+        resul2=ot_mat(mat1)
+        Visualizar(resul)
+        Visualizar(resul2)
+    </script>
+</body>
+</html>l

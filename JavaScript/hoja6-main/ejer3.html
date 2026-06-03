@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        3.-) Crea una función que recorra un array de objetos (productos de tecnología) y retorne el objeto completo que
+        tenga el precio más alto.
+        const inventario = [ { articulo: "Mouse", precio: 25 }, { articulo: "Teclado", precio: 45 }, { articulo: "Monitor", precio: 200
+        }, { articulo: "Auriculares", precio: 60 } ];
+        */
+       const inventario = [ { articulo: "Mouse", precio: 25 },
+         { articulo: "Teclado", precio: 45 },
+         { articulo: "Monitor", precio: 200},
+         { articulo: "Auriculares", precio: 60 } ];
+
+        function mayor_pr(obj){
+            mayor=0
+            obj_mayor={}
+            for (let i=0;i<obj.length;i++){
+                if(obj[i].precio>mayor){
+                    obj_mayor=obj[i]
+                    mayor=obj[i].precio
+                }
+            }
+            return obj_mayor
+        }
+
+        function Visualizar(dato){
+            document.write("El que tiene mayor precio es: " + dato.articulo + " (" + dato.precio + "€)")
+        }
+
+        resul=mayor_pr(inventario)
+        Visualizar(resul)
+    </script>
+</body>
+</html>

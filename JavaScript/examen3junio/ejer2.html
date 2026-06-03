@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let matriz=[
+            [20,4,8,7],
+            [8,4,9,8],
+            [10,7,8,7]
+        ]
+        
+
+        function diferencia(arr){
+            let mayor=0
+            let menor=999999999999999
+            let difer=[]
+            for (let i=0;i<arr.length;i++){
+                for(let k = 0;k<arr[i].length;i++){
+                    if(arr[i][k]>mayor){
+                        mayor=arr[i][k]
+                }
+                    if(arr[i][k]<menor){
+                        menor=arr[i][k]
+                    }
+                    let dif=mayor-menor
+
+                }
+                difer.push(dif)
+            }
+            return difer
+        }
+
+        function dif_men(arr){
+            menor=9999999
+            for (let i=0;i<arr.length;i++){
+                if(arr[i]<menor){
+                    menor=arr[i]
+                }
+            }
+            return menor
+        }
+        function Visualizar(dato){
+            document.write(dato)
+        }
+        resul=diferencia(matriz)
+        resul2=dif_men(resul)
+        Visualizar(resul2)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let datosJSON='{"nombre":"Ana","notas":[7,9,5,8,6]}';
+        let empleado=JSON.parse(datosJSON)
+
+        function nota_alt(obj){
+            mayor=0
+            for (let i=0;i<obj["notas"].length;i++){
+                if(obj["notas"][i]>mayor){
+                    mayor=obj["notas"][i]
+                }
+            }
+            return mayor
+        }
+
+        function nota_baj(obj){
+            menor=999999
+            for (let i=0;i<obj["notas"].length;i++){
+                if(obj["notas"][i]<mayor){
+                    menor=obj["notas"][i]
+                }
+            }
+            return menor
+        }
+
+        function media(obj){
+            conta=0
+            suma=0
+            for (let i=0;i<obj["notas"].length;i++){
+                suma+=obj["notas"][i]
+                conta++
+                Media=suma/conta
+            }
+            return Media
+        }
+
+        function MostrarInforme(dato1,dato2,dato3){
+            document.write("la mayor nota es: ",dato1,"<br>")
+            document.write("la menor nota es: ",dato2,"<br>")
+            document.write("la media es: ",dato3,"<br>")
+        }
+        
+
+        may=nota_alt(empleado)
+        menor=nota_baj(empleado)
+        med=media(empleado)
+        MostrarInforme(may,menor,med)
+    </script>
+</body>
+</html>

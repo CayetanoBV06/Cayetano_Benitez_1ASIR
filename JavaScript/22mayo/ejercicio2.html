@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+
+    <div id="res_media"></div>
+    <div id="res_mayor"></div>
+    <div id="res_super"></div>
+
+    <script>
+        let empleados = [
+            { nombre: "juan", pagos: [100, 200, 300] },
+            { nombre: "maria", pagos: [400, 500, 600] },
+            { nombre: "pedro", pagos: [700, 800, 900] }
+        ];
+
+        function mediaPagos() {
+            let texto = "";
+            for (let i = 0; i < empleados.length; i++) {
+                let suma = 0;
+                for (let j = 0; j < empleados[i].pagos.length; j++) {
+                    suma += empleados[i].pagos[j];
+                }
+                texto += "Empleado: " + empleados[i].nombre + " - Media: " + (suma / 3) + "<br>";
+            }
+            document.getElementById("res_media").innerHTML = texto;
+        }
+
+        function empleadoMayorMedia() {
+            let mayorMedia = 0;
+            let nombre = "";
+            for (let i = 0; i < empleados.length; i++) {
+                let media = (empleados[i].pagos[0] + empleados[i].pagos[1] + empleados[i].pagos[2]) / 3;
+                if (media > mayorMedia) {
+                    mayorMedia = media;
+                    nombre = empleados[i].nombre;
+                }
+            }
+            document.getElementById("res_mayor").innerHTML = "Mayor media: " + nombre;
+        }
+
+
+        
+        mediaPagos();
+        empleadoMayorMedia();
+
+    </script>
+</body>
+</html>

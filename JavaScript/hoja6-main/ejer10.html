@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Alumnos</title>
+</head>
+<body>
+
+    <label>Nombre: </label><input type="text" id="nombreAlumno"><br><br>
+    <label>Nota: </label><input type="number" id="notaAlumno"><br><br>
+    
+    <button onclick="guardar()">Guarda</button>
+    <button onclick="visualizar()">Visualiza</button>
+
+    <div id="resultado" style="margin-top: 20px;"></div>
+
+    <script>
+        // Array global para almacenar todos los alumnos
+        const listaAlumnos = [];
+
+        function guardar() {
+            // Capturamos los inputs
+            let nom = document.getElementById("nombreAlumno").value;
+            let not = document.getElementById("notaAlumno").value;
+
+            // Validamos que no estén vacíos
+            if (nom == "" || not == "") {
+                alert("Por favor, rellena ambos campos.");
+                return;
+            }
+
+            // Creamos el objeto individual de ese alumno
+            let alumno = {
+                nombre: nom,
+                nota: parseInt(not)
+            };
+
+            // Lo metemos al array de forma manual
+            listaAlumnos[listaAlumnos.length] = alumno;
+
+            // Limpiamos los cuadros de texto
+            document.getElementById("nombreAlumno").value = "";
+            document.getElementById("notaAlumno").value = "";
+
+            alert("Objeto guardado");
+        }
+
+        function visualizar() {
+            let caja = document.getElementById("resultado");
+            let contenido = "<h3>Listado de Alumnos:</h3>";
+
+            for (let i = 0; i < listaAlumnos.length; i++) {
+                contenido += "<p>Nombre: " + listaAlumnos[i].nombre + " - Nota: " + listaAlumnos[i].nota + "</p>";
+            }
+
+            caja.innerHTML = contenido;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        4.-) Diseña un script que vaya leyendo números y guardándolos en un array. Una vez lleno mostrará el array y
+        deberá decir cuantos números son pares y cuantos son impares. La entrada de datos termina cuando el usuario
+        teclea 0 o un valor no numérico.
+        Intenta resolverlo sin usar métodos del objeto array, solo indices y longitudes de arrays.
+        No debe aceptar valores no numéricos (isNaN(valor) permite detectar valores no numéricos).
+        Por ejemplo si tecleo: 3,5,4,6,7,8, 11 el script me dirá que el array de entrada es [3,5,4,6,7,8, 11] y que hay 3 pares
+        y 4 impares.
+        */
+        
+        function numeros(){
+        let todosLosNumeros = [];
+            let sw = 0; // Tu variable interruptor (0 = continuar, 1 = parar)
+
+            while(sw == 0){
+                let entrada = prompt("Dame números (para acabar escribe 0 o texto): ");
+
+                // 1. CONDICIÓN DE PARADA: Si es texto, es nulo o es exactamente "0"
+                if(isNaN(entrada) || entrada === null || parseInt(entrada) === 0){
+                    sw = 1; // Activamos el interruptor para salir
+                } 
+                // 2. SI ES UN NÚMERO VÁLIDO: Lo guardamos en el array
+                else {
+                    let num = parseInt(entrada);
+                    // Guardamos usando la longitud del array como índice (sin .push)
+                    todosLosNumeros[todosLosNumeros.length] = num;
+                }
+            }
+
+            // 3. PROCESAMIENTO: Contamos pares e impares recorriendo el array final
+            let pares = 0;
+            let impares = 0;
+
+            for(let i = 0; i < todosLosNumeros.length; i++){
+                if(todosLosNumeros[i] % 2 == 0){
+                    pares++;
+                } else {
+                    impares++;
+                }
+            }
+
+            // Devolvemos los resultados empaquetados en un array
+            return [todosLosNumeros, pares, impares];
+        }
+
+        function Visualizar(datos){
+            // datos[0] es el array, datos[1] los pares, datos[2] los impares
+            document.write("<p>El array de entrada es: [" + datos[0] + "]</p>");
+            document.write("<p>Pares: " + datos[1] + "</p>");
+            document.write("<p>Impares: " + datos[2] + "</p>");
+        }
+
+        // Ejecución
+        let resul = numeros();
+        Visualizar(resul);
+    </script>
+</body>
+</html>

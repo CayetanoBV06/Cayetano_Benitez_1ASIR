@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ingrese numero:<input type="number" id="num1"></p>
+
+
+        <button type="button" value="calcular" onClick="Calcular()">Calcular</button>
+        <button type="button" value="par" onClick="Mostrar_pares()">par</button>
+        <button type="button" value="impar" onClick="Mostrar_impares()">impar</button>
+            <p></p>Resultado:<p id = "resul"></p>
+    <script>
+        /*
+        se pide por teclado un numero, un boton que diga calcular cuando le des al boton visualice si es par o impar,
+        se añade otros dos botones, uno se llama pares y otros impares, si le das al de par se visualiza los valores pares
+        tecleados anteriormente, y si le das al de impar se visualizan los impares tecleados hasta ese momento
+        */
+        let lista_pares=[]
+        let lista_impares=[]
+        function Calcular(){
+            let input = document.getElementById("num1");
+            let numero = parseInt(input.value);
+            let display = document.getElementById("resul");
+
+            if (numero % 2 === 0) {
+                display.innerHTML = numero + " es Par";
+                lista_pares.push(numero); 
+            } else {
+                display.innerHTML = numero + " es Impar";
+                lista_impares.push(numero); 
+            }
+            
+            input.value = ""; 
+        }
+
+        function Mostrar_pares(){
+            document.getElementById("resul").innerHTML="los numeros pares tecleados anteriormente son "+lista_pares+" ,"
+        }
+        function Mostrar_impares(){
+            document.getElementById("resul").innerHTML="los numeros impares tecleados anteriormente son "+lista_impares+" ,"
+        }
+    </script>
+</body>
+</html>

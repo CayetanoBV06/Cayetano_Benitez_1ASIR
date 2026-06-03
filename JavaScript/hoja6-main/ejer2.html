@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        2.-) Dado un array de objetos (personas), crea una función que reciba el array y una edad mínima. Debe retornar un
+        array con los nombres de las personas que sean mayores o iguales a esa edad.
+        const usuarios = [ { nombre: "Ana", edad: 25 }, { nombre: "Luis", edad: 17 }, { nombre: "María", edad: 30 }, { nombre:
+        "Juan", edad: 19 } ];
+        */
+
+        const usuarios = [ { nombre: "Ana", edad: 25 },
+          { nombre: "Luis", edad: 17 }, 
+          { nombre: "María", edad: 30 },
+          { nombre:"Juan", edad: 19 } ];
+
+        let edad=parseInt(prompt("Dame una edad"))
+        
+        function mayores(usuario,edad){
+            let nombres=[]
+            for(let i=0;i<usuario.length;i++){
+                if(usuario[i].edad>=edad){
+                    nombres.push(usuario[i].nombre)
+                }
+            }
+            return nombres
+        }
+
+        function Visualizar(dato){
+            document.write("Mayores de la edad indicada: ",dato)
+        }
+
+        resul=mayores(usuarios,edad)
+        Visualizar(resul)
+    </script>
+</body>
+</html>
